@@ -1,0 +1,591 @@
+/* initial settings */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0px;
+    letter-spacing: 1px;
+    color: #08286d;
+    font-family: 'Nunito', sans-serif;
+}
+
+a {
+    color: #08286d;
+    text-decoration: none;
+}
+
+/****** header and navigation bar ******/
+header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    top: 0px;
+    position: fixed;
+    /* box-shadow: 0px 0px 15px rgba(120, 120, 120, 0.6); */
+    border-bottom: 1px silver solid;
+    justify-content: space-between;
+    background: white;
+    z-index: 5;
+}
+
+header img {
+    width: 120px;
+    height: 60px;
+    margin: 5px 10px;
+}
+
+header img:hover {
+    opacity: 0.8;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav>a,
+.drop_down>a {
+    height: 66px;
+    padding: 0px 12px;
+    display: flex;
+    align-items: center;
+}
+
+/* drop down menu for subcategories starts here ***************/
+header nav>a:hover,
+.drop_down>a:hover {
+    border-bottom: 4px solid #6c96f9;
+    color: #6c96f9;
+}
+
+.drop_down>a:hover {
+    border-bottom: 4px solid #6c96f9;
+    color: #6c96f9;
+}
+
+header nav>a:active,
+.drop_down>a:active {
+    border-bottom: 4px solid #b6ccfe;
+    color: #b6ccfe;
+}
+
+.drop_down {
+    position: relative;
+}
+
+.drop_down div {
+    display: none;
+    background-color: #dfe8ff;
+    position: absolute;
+    width: 200%;
+    flex-direction: column;
+}
+
+.drop_down:hover div {
+    display: flex;
+}
+
+.drop_down:hover>a {
+    border-bottom: 4px solid #6c96f9;
+    color: #6c96f9;
+}
+
+.drop_down div>a {
+    padding: 10px;
+}
+
+.drop_down div>a:hover {
+    background-color: #6c96f9;
+    color: white;
+}
+
+/************** drop down menu for subcategories ends here ************/
+
+#current_page {
+    background-color: #6c96f9;
+    color: white;
+    border-bottom: 4px solid #6c96f9;
+}
+
+/* hide hamburger menu and the button when the screen width is wider then 650 px */
+.hamburger {
+    display: none;
+}
+
+.hamburger_icon {
+    display: none;
+}
+
+/****** article ******/
+article {
+    margin-top: 70px;
+}
+
+/* home page content */
+#mission_box {
+    height: 360px;
+    background: url("https://neukevin.neocities.org/final_project_img/mission_bg_grey.png");
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#mission_box span {
+    font-size: 2.5em;
+    font-weight: 600;
+    color: white;
+    text-shadow: 0px 2px 4px black;
+    text-align: center;
+}
+
+#mission_box span:first-child {
+    font-size: 4em;
+}
+
+.slide_show_box {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.slide_show_box img {
+    width: 20%;
+}
+
+
+/*
+image slide show with animation 
+reference: week 7 examples - imageSlideShow - slider1.css
+*/
+.slide_show_img {
+    width: 20%;
+    position: relative;
+}
+
+/* 
+reference: https://developer.mozilla.org/en-US/docs/Web/CSS/::before
+creates a pseudo-element that is the first child of .slide_show_img
+
+reference: https://stackoverflow.com/questions/1495407/maintain-the-aspect-ratio-of-a-div-with-css
+set padding-top to 140% to main the aspect ratio to 1:1.4
+*/
+.slide_show_img::before {
+    width: 100%;
+    padding-top: 140%;
+    display: block;
+    content: "";
+}
+
+.slide_show_img img {
+    width: 100%;
+    position: absolute;
+    animation: slide_show_img 12s infinite;
+    opacity: 0;
+    left: 0;
+    top: 0px;
+}
+
+
+@keyframes slide_show_img {
+    30% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 0;
+    }
+}
+
+.slide_show_img img:nth-child(3) {
+    animation-delay: 0s;
+}
+
+.slide_show_img img:nth-child(2) {
+    animation-delay: 4s;
+}
+
+.slide_show_img img:nth-child(1) {
+    animation-delay: 8s;
+}
+
+/* image slide show with animation ends here */
+
+
+.link_box {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+.link_box span {
+    font-size: 1.5em;
+}
+
+/* key frames for the moving boxes on the top and bottom of the explore buttons 
+    adapted from moveSquare.css from week 7 class materials */
+@keyframes box_decoration_t {
+    0% {
+        margin-left: 0%;
+        padding-left: 0%;
+    }
+
+    25% {
+        margin-left: 80%;
+        padding-left: 0%;
+        background-color: #b6ccfe;
+    }
+
+    50% {
+        margin-left: 0%;
+        padding-left: 80%;
+        background-color: #08286d;
+    }
+
+    75% {
+        margin-left: 0%;
+        padding-left: 0%;
+    }
+}
+
+@keyframes box_decoration_b {
+    0% {
+        margin-left: 80%;
+        padding-right: 0%;
+    }
+
+    25% {
+        margin-left: 0%;
+        padding-right: 0%;
+        background-color: #b6ccfe;
+    }
+
+    50% {
+        margin-left: 0%;
+        padding-right: 80%;
+        background-color: #08286d;
+    }
+
+    75% {
+        margin-left: 80%;
+        padding-right: 0%;
+    }
+}
+
+/* set default attributes and add key frames to the moving boxes*/
+.link_box_decoration_top,
+.link_box_decoration_bottom {
+    width: 20%;
+    padding: 0% 0% 10% 0%;
+    margin: 0% 0% 10% 0%;
+    background-color: #6c96f9;
+    animation-name: box_decoration_t;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+.link_box_decoration_bottom {
+    margin: 10% 0% 0% 80%;
+    animation-name: box_decoration_b;
+}
+
+.explore_button {
+    margin: 10px 0px;
+    border: 2px solid #6c96f9;
+    text-align: center;
+    padding: 6px;
+    transition: all 0.2s;
+    color: #6c96f9;
+}
+
+.explore_button:hover {
+    color: white;
+    background-color: #6c96f9;
+}
+
+#news_box_title {
+    margin: 40px 0px 10px 2%;
+    font-size: 2em;
+}
+
+.news_box {
+    display: flex;
+    justify-content: space-around;
+}
+
+.news {
+    width: 30%;
+}
+
+.movie_title {
+    height: 200px;
+    margin-bottom: 15px;
+    background-image: url("https://neukevin.neocities.org/final_project_img/sq_lightyear_poster.jpg");
+    background-size: 100%;
+    background-position: center center;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8em;
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px gray;
+    transition: all 0.2s;
+    text-shadow: 0px 2px 4px black;
+}
+
+.second_movie_title {
+    background-image: url("https://neukevin.neocities.org/final_project_img/sq_encanto_poster.jpg");
+}
+
+.third_movie_title {
+    background-image: url("https://neukevin.neocities.org/final_project_img/sq_spider_man_poster.jpg");
+}
+
+.movie_title:hover {
+    background-size: 120%;
+}
+
+label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+label:hover {
+    color: #2f63df;
+}
+
+/* this part creates collapsible using an invisible checkbox and :checked and label tag, 
+    adapted from collapsible.css provided in week 8 class material - Examples-ResponsiveDesign - TriggeringAnimation */
+/* creates the little arrow of the collapsible */
+label span {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid;
+    margin: 2px;
+    transition: all 0.2s;
+}
+
+/* rotate the arrow when the invisible checkbox is clicked */
+#first_news_p:checked+label span,
+#second_news_p:checked+label span,
+#third_news_p:checked+label span {
+    transform: rotate(180deg);
+}
+
+/* hide the text when the invisible checkbox is unchecked */
+#first_news_p+label+p,
+#second_news_p+label+p,
+#third_news_p+label+p {
+    transition: all 0.3s;
+    overflow: hidden;
+    opacity: 0;
+    margin-top: 0.5em;
+    transform: translateY(-15px);
+    cursor: default;
+}
+
+/* show the text when the invisible checkbox is checked */
+#first_news_p:checked+label+p,
+#second_news_p:checked+label+p,
+#third_news_p:checked+label+p {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+/****** footerv with sitemap and logo******/
+footer {
+    background-color: #c1d3fe;
+}
+
+footer>div {
+    height: 200px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.sitemap a {
+    font-size: 0.8em;
+    margin: 0px 5px;
+}
+
+.sitemap a:hover {
+    text-decoration: underline;
+}
+
+footer>div img {
+    width: 140px;
+    height: 70px;
+    transition: all 0.2s;
+}
+
+footer>div img:hover {
+    width: 140px;
+    height: 70px;
+    transform: translateY(-6px);
+}
+
+footer p {
+    margin: 0px;
+    padding-bottom: 10px;
+    font-size: 6px;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 750px) {
+
+    .slide_show_box {
+        flex-direction: column;
+    }
+
+    .slide_show_box img {
+        width: 40%;
+    }
+
+    .link_box {
+        width: 40%;
+        margin: 5px 0px 20px 0px;
+        text-align: center;
+    }
+
+    .slide_show_img {
+        width: 50%;
+    }
+
+    .slide_show_img img {
+        width: 100%;
+    }
+
+    .link_box_decoration_top,
+    .link_box_decoration_bottom {
+        display: none;
+    }
+
+    .news_box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .news {
+        width: 80%;
+    }
+
+    #news_box_title {
+        text-align: center;
+    }
+
+    footer>div {
+        flex-direction: column;
+    }
+}
+
+/* show hamburger menu while the screen width is less then 650 px */
+@media screen and (max-width: 650px) {
+    header nav {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        background-color: #dfe8ff;
+        top: -370px;
+        transition: all 0.3s;
+    }
+
+    .hamburger a {
+        text-align: center;
+        padding: 10px 0px;
+    }
+
+    .hamburger a:hover {
+        text-align: center;
+        padding: 10px 0px;
+        background-color: #6c96f9;
+        color: white;
+    }
+
+    .hamburger_icon {
+        display: block;
+        width: 60px;
+        height: 70px;
+        background-color: white;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .hamburger_icon:hover {
+        opacity: 0.8;
+    }
+
+    .rect1,
+    .rect2,
+    .rect3 {
+        position: absolute;
+        width: 40px;
+        height: 6px;
+        background-color: #6c96f9;
+        top: 20px;
+        left: 10px;
+        transition: all 0.2s;
+        transform-origin: left;
+    }
+
+    .rect2 {
+        top: 32px;
+    }
+
+    .rect3 {
+        top: 44px;
+    }
+
+    /* onclick hamburger icon */
+    .hamburger_icon_cross .rect1 {
+        transform: rotate(45deg);
+        left: 15px;
+        width: 34px;
+    }
+
+    .hamburger_icon_cross .rect3 {
+        transform: rotate(-45deg);
+        left: 15px;
+        width: 34px;
+    }
+
+    .hamburger_icon_cross .rect2 {
+        width: 0px;
+    }
+
+    .drop_hamburger {
+        top: 70px;
+    }
+
+    .mask {
+        background-color: rgba(120, 120, 120, 0.6);
+        height: 100vh;
+        width: 100vw;
+        position: fixed;
+        z-index: 2;
+        top: -100vh;
+        transition: all 0.3s;
+    }
+
+    .drop_mask {
+        top: 0px;
+    }
+}

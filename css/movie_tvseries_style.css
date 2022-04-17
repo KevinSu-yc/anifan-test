@@ -1,0 +1,134 @@
+.movie_page_title,
+.tvseries_page_title {
+    padding: 80px;
+    text-align: center;
+    font-size: 3em;
+    background-image: url("https://neukevin.neocities.org/final_project_img/movie.png");
+    background-position: center;
+    color: white;
+    text-shadow: 0px 2px 4px black;
+}
+
+.tvseries_page_title {
+    background-image: url("https://neukevin.neocities.org/final_project_img/cinema.png");
+}
+
+.mt_row {
+    display: flex;
+    margin: 0px 2% 40px 2%;
+    justify-content: center;
+}
+
+.mt_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+}
+
+.mt_poster {
+    width: 50%;
+    margin-right: 5%;
+}
+
+.mt_poster img {
+    width: 100%;
+    transition: opacity 0.3s;
+}
+
+.mt_poster img:hover {
+    opacity: 0.8;
+}
+
+.mt_intro {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.mt_intro>p {
+    font-size: 2vw;
+    font-weight: 600;
+    margin: 0px;
+    border-bottom: 5px solid #c1d3fe;
+}
+
+.mt_intro>ul {
+    font-size: 1.4vw;
+    padding-left: 0px;
+    list-style: none;
+}
+
+.mt_intro>a {
+    padding: 2px 4px;
+    border: 2px solid #08286d;
+    font-size: 1.4vw;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+.mt_intro>a:hover {
+    color: white;
+    background-color: #08286d;
+}
+
+.mt_box_last .mt_poster {
+    background-color: silver;
+    transition: background-color 0.3s;
+    position: relative;
+}
+
+.mt_box_last .mt_poster:hover {
+    background-color: gray;
+}
+
+.mt_box_last .mt_poster img {
+    visibility: hidden;
+}
+
+.mt_box_last .mt_poster p {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    color: white;
+    font-size: 4vw;
+    cursor: default;
+    opacity: 0;
+    border-bottom: 5px solid white;
+    transition: all 0.2s;
+}
+
+.mt_box_last .mt_poster:hover p {
+    top: 25%;
+    opacity: 1;
+}
+
+@media screen and (max-width:950px) {
+    .mt_row {
+        flex-direction: column;
+        align-items: center;
+        margin: 0px 2%;
+    }
+
+    .mt_poster {
+        width: 40%;
+        margin-right: 5%;
+    }
+
+    .mt_box {
+        margin-bottom: 40px;
+        width: auto;
+    }
+
+    .mt_intro>p {
+        font-size: 3vw;
+    }
+    
+    .mt_intro>ul {
+        font-size: 2.4vw;
+    }
+
+    .mt_intro>a {
+        font-size: 2.4vw;
+    }
+}

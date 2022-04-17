@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>AniFan | About</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="../css/main_style.css">
+    <link rel="stylesheet" href="../css/about_style.css">
+    <!-- resource from google font: Nunito, designed by Vernon Adams, Cyreal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- referece: class material - Examples-ResponsiveDesign - hamburger3 
+        onclick event: show hamburger menu by adding the class name -->
+    <script>
+        function dropHamburger() {
+            let menu = document.getElementById("hamburger");
+            let mask = document.getElementById("mask");
+            let icon = document.getElementById("hamburger_icon");
+            if (menu.className == "hamburger") {
+                menu.className += " drop_hamburger";
+                mask.className += " drop_mask";
+                icon.className += " hamburger_icon_cross";
+            } else {
+                menu.className = "hamburger";
+                mask.className = "mask";
+                icon.className = "hamburger_icon";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="mask" id="mask" onclick="dropHamburger()">
+        <div class="hamburger" id="hamburger">
+            <a href="/">HOME</a>
+            <a href="/movies/movies.html">MOVIES</a>
+            <a href="/tv_series/tv_series.html">TV SERIES</a>
+            <a href="/studios/studios.html">STUDIOS</a>
+            <a href="/about/about.html" id="current_page">ABOUT</a>
+        </div>
+    </div>
+    <header>
+        <a href="/"><img src="https://neukevin.neocities.org/final_project_img/anifan_logo.png" alt="AniFan Logo"
+                title="Home" class="logo"></a>
+        <nav>
+            <a href="/">HOME</a>
+            <div class="drop_down">
+                <a href="/movies/movies.html">MOVIES</a>
+                <div>
+                    <a href="/movies/wall_e.html">WALL·E</a>
+                    <a href="/movies/wreck_it_ralph.html">Wreck-It Ralph</a>
+                    <a href="/movies/princess_mononoke.html">Princess Mononoke</a>
+                </div>
+            </div>
+            <div class="drop_down">
+                <a href="/tv_series/tv_series.html">TV SERIES</a>
+                <div>
+                    <a href="/tv_series/adventure_time.html">Adventure Time</a>
+                    <a href="/tv_series/violet_evergarden.html">Violet Evergarden</a>
+                    <a href="/tv_series/fullmetal_alchemist_brotherhood.html">Fullmetal Alchemist: Brotherhood</a>
+                </div>
+            </div>
+            <a href="/studios/studios.html">STUDIOS</a>
+            <a href="/about/about.html" id="current_page">ABOUT</a>
+        </nav>
+        <div class="hamburger_icon" id="hamburger_icon" onclick="dropHamburger()">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+        </div>
+    </header>
+
+    <article>
+        <p class="page_title">
+            About AniFan
+        </p>
+
+        <div class="about_row">
+            <div class="about_img">
+                <img src="https://neukevin.neocities.org/final_project_img/anifan_logo.png" alt="AniFan" title="AniFan">
+            </div>
+            <div class="about_description_box">
+                <p>AniFan</p>
+                <p>
+                    AniFan is a website created by a big animation fans. This site mainly shares animation movies and TV
+                    series as recommendation for people who are interested but new to animations. This website includes
+                    pages that introduce plots, characters, and images of each animation.In addition, we also provide
+                    information about the studios that made the animations shared here. Furthermore, other animation
+                    fans are also welcome to visit and explore contents that might fit their interests.
+                </p>
+                <p>
+                    We will do our best provide news about upcoming movies and TV series, meanwhile, update new
+                    recommendations every month. Hope you have fun exploring a little part of the animation world here!
+                </p>
+            </div>
+        </div>
+
+        <div class="reference_box">
+            <p>References</p>
+            <div>
+                <ul>
+                    <li><a href="https://www.bones.co.jp/">Bones Inc. Official Website ></a></li>
+                    <li><a href="https://www.cartoonnetworkstudios.com/">Cartoon Network Studios Official Website ></a>
+                    </li>
+                    <li><a href="https://www.ghibli.jp/">Studio Ghibli Official Website ></a></li>
+                    <li><a href="http://www.kyotoanimation.co.jp/en/">Kyoto Animation Official Website ></a></li>
+                    <li><a href="https://www.pixar.com/">Pixar Animation Studios Official Website ></a></li>
+                    <li><a href="https://www.disneyanimation.com/">Walt Disney Animation Studios Official Website ></a>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li><a href="https://www.imdb.com/">IMDb: Ratings, Reviews, and Where to Watch the Best Movies & TV
+                            Shows ></a></li>
+
+                    <li><a href="https://en.wikipedia.org/wiki/Bones_(studio)">Bones Inc. - Wikipedia ></a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Cartoon_Network_Studios">Cartoon Network Studios -
+                            Wikipedia ></a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Studio_Ghibli">Studio Ghibli - Wikipedia ></a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Kyoto_Animation">Kyoto Animation - Wikipedia ></a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Pixar">Pixar Animation Studios - Wikipedia ></a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Walt_Disney_Animation_Studios">Walt Disney Animation
+                            Studios - Wikipedia ></a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer>
+        <div>
+            <div class="sitemap">
+                <a href="/"><span>HOME</span></a>
+                <a href="/movies/movies.html"><span>MOVIES</span></a>
+                <a href="/tv_series/tv_series.html"><span>TV SERIES</span></a>
+                <a href="/studios/studios.html"><span>STUDIOS</span></a>
+                <a href="/about/about.html"><span>ABOUT</span></a>
+            </div>
+            <a href="/"><img src="https://neukevin.neocities.org/final_project_img/anifan_logo.png" alt="AniFan Logo"
+                    title="Home"></a>
+        </div>
+        <p>Created By AniFan 2021.</p>
+    </footer>
+</body>
+
+</html>

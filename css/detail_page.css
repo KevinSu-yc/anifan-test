@@ -1,0 +1,319 @@
+
+/* slide show with buttons using a tag */
+.top_slideshow_box {
+    position: relative;
+    width: 80%;
+    margin: 0px 10%;
+}
+
+.top_slideshow_box p {
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    color: white;
+    font-weight: 600;
+    font-size: 8vw;
+    text-shadow: 0px 0px 8px #333;
+    text-align: center;
+    opacity: 0.8;
+}
+
+.top_slideshow_box img {
+    width: 100%;
+    padding-top: 120px;
+    margin-top: -100px;
+    transition: all 0.3s;
+}
+
+.top_slideshow_box img:not(:first-child) {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+}
+
+.link_holder {
+    display: flex;
+    justify-content: center;
+    bottom: 10px;
+    width: 100%;
+    position: absolute;
+}
+
+.link_button {
+    display: inline-block;
+    width: 8%;
+    height: 8px;
+    margin: 2px 4px;
+    background: white;
+    opacity: 0.6;
+    box-shadow: 0px 0px 5px #333;
+}
+
+.link_button:hover {
+    opacity: 1;
+}
+/* use :target to show the target image */
+#w2:target,
+#w3:target,
+#w4:target,
+#w5:target {
+    opacity: 1;
+}
+
+.basic_info_row {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 10%;
+}
+
+.basic_info_row .studio_img {
+    width: 40%;
+    margin: auto 0px;
+}
+
+.basic_info_row .studio_img img {
+    width: 100%;
+}
+
+.basic_info {
+    width: 40%;
+    font-size: 1.5vw;
+    text-align: right;
+    list-style: none;
+}
+
+.basic_info li{
+    padding: 5px 10px;
+}
+
+.basic_info_title{
+    font-weight: 600;
+    background-color: #c1d3fe;
+}
+
+
+
+.detail_title {
+    margin: 4%;
+    font-size: 3em;
+    font-weight: 600;
+    border-bottom: 6px solid #80a5fd;
+}
+
+.plot_row {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 4%;
+}
+
+.plot_row .plot {
+    width: 65%;
+    font-size: 1.5vw;
+}
+
+.plot p a{
+    text-decoration: underline;
+}
+
+.plot p a:hover{
+    color: #80a5fd;
+}
+
+.plot_row .poster {
+    width: 30%;
+    margin: auto;
+}
+
+.plot_row .poster img {
+    width: 100%;
+}
+
+/* create images buttons for switching the images of different characters */
+.character_row {
+    display: flex;
+    margin: 0% 4%;
+    justify-content: space-between;
+}
+
+.c_button_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 20%;
+}
+
+.c_button_box a {
+    width: 80%;
+    margin: 0% 0% 5% 0%;
+}
+
+.c_button_box a img {
+    width: 100%;
+    transition: all 0.3s;
+    box-shadow: 0px 0px 5px gray;
+}
+
+.c_button_box a img:hover {
+    opacity: 0.9;
+    box-shadow: 0px 0px 10px gray;
+    transform: translateY(-2px);
+}
+
+.c_box {
+    position: relative;
+    width: 80%;
+}
+
+.c1,
+.c2 {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    text-shadow: 0px 0px 8px #333;
+    transition: all 0.3s;
+    width: 80%;
+    padding: 10% 10% 20% 10%;
+}
+
+.c2 {
+    position: absolute;
+    top: 0px;
+    opacity: 0;
+}
+
+.c1 p,
+.c2 p {
+    margin: 0px;
+    font-size: 8vw;
+}
+
+#character1,
+#character2 {
+    margin-top: -100px;
+    padding-top: 100px;
+}
+
+#character1:target~.c_box .c1,
+#character2:target~.c_box .c2 {
+    opacity: 1;
+}
+
+/*************** images for each animation ***********************/
+#wall_e_image {
+    background-image: url("https://neukevin.neocities.org/final_project_img/walle/walle_rect.png");
+}
+
+#eve_image {
+    background-image: url("https://neukevin.neocities.org/final_project_img/walle/eve_rect.png");
+}
+
+#ralph_image {
+    background-image: url("https://neukevin.neocities.org/final_project_img/wreck_it_ralph/ralph_rect.png");
+}
+
+#vanellope_image {
+    background-image: url("https://neukevin.neocities.org/final_project_img/wreck_it_ralph/vanellope_rect.png");
+}
+
+#ashitaka_image {
+    background-image: url("https://neukevin.neocities.org/final_project_img/princess_mononoke/ashitaka_rect.jpg");
+}
+
+#san_image {
+    background-image: url("https://neukevin.neocities.org/final_project_img/princess_mononoke/san_rect.jpg");
+}
+
+#finn_image {
+    background-image: url("https://neukevin.neocities.org/final_project_img/adventure_time/finn_rect.jpg");
+}
+
+#jake_image {
+    background-image: url("https://neukevin.neocities.org/final_project_img/adventure_time/jake_rect.jpg");
+}
+
+#fab_title {
+    font-size: 6vw;
+}
+
+#edward_image {
+    background-image: url("https://neukevin.neocities.org/final_project_img/fullmetal/edward_rect.jpg");
+}
+
+#alphonse_image {
+    background-image: url("https://neukevin.neocities.org/final_project_img/fullmetal/alphonse_rect.jpg");
+}
+
+#violet_image {
+    background-image: url("https://neukevin.neocities.org/final_project_img/violet/violet_rect.jpg");
+}
+
+#gilbert_image {
+    background-image: url("https://neukevin.neocities.org/final_project_img/violet/gilbert_rect.jpg");
+}
+
+@media screen and (max-width: 750px) {
+    .basic_info_row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .basic_info_row .studio_img {
+        width: 80%;
+        margin: auto 0px;
+    }
+
+    .basic_info_row .studio_img img {
+        width: 100%;
+    }
+
+    .basic_info {
+        width: 80%;
+        font-size: 2.5vw;
+        text-align: left;
+        margin-top: 20px;
+    }
+
+    .detail_title {
+        font-size: 2.5em;
+    }
+
+    .plot_row {
+        flex-direction: column-reverse;
+    }
+
+    .plot_row .plot {
+        width: 100%;
+        font-size: 1em;
+    }
+
+    .plot_row .poster {
+        width: 40%;
+    }
+
+    .character_row {
+        flex-direction: column;
+    }
+
+    .c_box {
+        position: relative;
+        width: 100%;
+    }
+
+    .c_button_box {
+        flex-direction: row;
+        width: 40%;
+    }
+
+    .c_button_box a {
+        margin: 0% 5% 5% 0%;
+    }
+
+    #character1,
+    #character2 {
+        margin-top: 0px;
+        padding-top: 0px;
+    }
+
+}

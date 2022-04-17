@@ -1,0 +1,116 @@
+.page_title {
+    padding: 50px;
+    text-align: center;
+    font-size: 3em;
+    background-image: url("https://neukevin.neocities.org/final_project_img/studio_banner.png");
+    background-position: center;
+    color: white;
+    text-shadow: 0px 2px 4px black;
+}
+
+.video_box {
+    text-align: center;
+    margin: auto;
+}
+
+#studios_video {
+    width: 80%;
+    max-width: 850px;
+}
+
+.video_box a {
+    background-color: #6c96f9;
+    border-radius: 16px;
+    padding: 4px 12px;
+    transition: all 0.2s;
+    color: white;
+}
+
+.video_box a:hover {
+    opacity: 0.8;
+}
+
+.video_box~p {
+    margin: 50px 0px 15px 4%;
+    font-size: 2.2em;
+    font-weight: 600;
+}
+
+.studio_row {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 0px;
+}
+
+.studio_row_reverse {
+    flex-direction: row-reverse;
+}
+
+.studio_img {
+    width: 40%;
+    margin: auto 0px;
+}
+
+.studio_img img {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 10px 10px #c1d3fe;
+}
+
+.studio_description_box {
+    width: 45%;
+}
+
+.studio_description_box p:first-child {
+    font-size: 1.8em;
+    border-bottom: 8px solid #80a5fd;
+    display: inline-block;
+    padding-right: 15px;
+    margin-bottom: 10px;
+}
+
+.studio_table {
+    margin: 10px auto 50px auto;
+    width: 80%;
+    border-collapse: collapse;
+    border-radius: 5px;
+}
+
+.studio_table caption {
+    padding: 10px;
+}
+
+.studio_table th,
+.studio_table td {
+    text-align: left;
+    padding: 10px;
+}
+
+.studio_table tbody tr:nth-child(even),
+.studio_table thead tr {
+    background-color: #c1d3fe;
+}
+
+.studio_table tbody tr:hover {
+    background-color: #80a5fd;
+}
+
+@media screen and (max-width: 750px) {
+    .video_box~p {
+        text-align: center;
+    }
+
+    .studio_row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .studio_img {
+        width: 80%;
+        margin: auto 0px;
+    }
+
+    .studio_description_box {
+        width: 80%;
+    }
+}

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>AniFan | Studios</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="../css/main_style.css">
+    <link rel="stylesheet" href="../css/studios_style.css">
+    <!-- resource from google font: Nunito, designed by Vernon Adams, Cyreal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- referece: class material - Examples-ResponsiveDesign - hamburger3 
+        onclick event: show hamburger menu by adding the class name -->
+    <script>
+        function dropHamburger() {
+            let menu = document.getElementById("hamburger");
+            let mask = document.getElementById("mask");
+            let icon = document.getElementById("hamburger_icon");
+            if (menu.className == "hamburger") {
+                menu.className += " drop_hamburger";
+                mask.className += " drop_mask";
+                icon.className += " hamburger_icon_cross";
+            } else {
+                menu.className = "hamburger";
+                mask.className = "mask";
+                icon.className = "hamburger_icon";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="mask" id="mask" onclick="dropHamburger()">
+        <div class="hamburger" id="hamburger">
+            <a href="/">HOME</a>
+            <a href="/movies/movies.html">MOVIES</a>
+            <a href="/tv_series/tv_series.html">TV SERIES</a>
+            <a href="/studios/studios.html" id="current_page">STUDIOS</a>
+            <a href="/about/about.html">ABOUT</a>
+        </div>
+    </div>
+    <header>
+        <a href="/"><img src="https://neukevin.neocities.org/final_project_img/anifan_logo.png" alt="AniFan Logo"
+                title="Home" class="logo"></a>
+        <nav>
+            <a href="/">HOME</a>
+            <div class="drop_down">
+                <a href="/movies/movies.html">MOVIES</a>
+                <div>
+                    <a href="/movies/wall_e.html">WALL·E</a>
+                    <a href="/movies/wreck_it_ralph.html">Wreck-It Ralph</a>
+                    <a href="/movies/princess_mononoke.html">Princess Mononoke</a>
+                </div>
+            </div>
+            <div class="drop_down">
+                <a href="/tv_series/tv_series.html">TV SERIES</a>
+                <div>
+                    <a href="/tv_series/adventure_time.html">Adventure Time</a>
+                    <a href="/tv_series/violet_evergarden.html">Violet Evergarden</a>
+                    <a href="/tv_series/fullmetal_alchemist_brotherhood.html">Fullmetal Alchemist: Brotherhood</a>
+                </div>
+            </div>
+            <a href="/studios/studios.html" id="current_page">STUDIOS</a>
+            <a href="/about/about.html">ABOUT</a>
+        </nav>
+        <div class="hamburger_icon" id="hamburger_icon" onclick="dropHamburger()">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+        </div>
+    </header>
+
+    <article>
+        <p class="page_title">
+            Animation Studios <br>
+            Creators of the Masterpieces
+        </p>
+
+        <div class="video_box">
+            <p>| Creating An Animation - Moana |</p>
+            <video id="studios_video" controls title="Creating An Animation - Moana">
+                <source src="../video/create_animation.mp4" type="video/mp4">
+                Video tag not supported.
+            </video>
+            <p><a href="https://www.youtube.com/watch?v=7EWLeynJ5_w">See original video on YouTube</a></p>
+        </div>
+
+        <p><u>Studios</u></p>
+
+        <div class="studio_row">
+            <div class="studio_img">
+                <img src="https://neukevin.neocities.org/final_project_img/studio_pixar.jpg"
+                    alt="Pixar Animation Studios" title="Pixar Animation Studio">
+            </div>
+            <div class="studio_description_box">
+                <p>Pixar Animation Studios</p>
+                <p>
+                    Pixar Animation Studios is an American computer animation studio known for its critically and
+                    commercially successful computer animated feature films. It is based in Emeryville, California, and
+                    is a subsidiary of Walt Disney Studios owned by The Walt Disney Company.
+                </p>
+                <p>
+                    Pixar began in 1979 as part of the Lucasfilm computer division, known as the Graphics Group, before
+                    its spin-off as a corporation in 1986, with funding from Apple co-founder Steve Jobs, who became its
+                    majority shareholder. Disney purchased Pixar in 2006 at a valuation of $7.4+ billion by converting
+                    each share of Pixar stock to 2.3 shares of Disney stock.
+                </p>
+                <p>
+                    Pixar has produced 24 feature films, beginning with Toy Story (1995), which is the first fully
+                    computer-animated feature film; its most recent film was Luca (2021).A desk lamp from the studio's
+                    1986 short film of the same name, is the studio's mascot.
+                </p>
+            </div>
+        </div>
+        <table class="studio_table">
+            <caption>| High-Grossing Pixar Animation Movies |</caption>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Box Office</th>
+                    <th>Release</th>
+                    <th>IMDb Rating</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Toy Story 4</td>
+                    <td>$1.073 billion</td>
+                    <td>2019</td>
+                    <td>7.7</td>
+                </tr>
+                <tr>
+                    <td>Inside Out</td>
+                    <td>$857 million</td>
+                    <td>2015</td>
+                    <td>8.1</td>
+                </tr>
+                <tr>
+                    <td>Coco</td>
+                    <td>$800 million</td>
+                    <td>2017</td>
+                    <td>8.4</td>
+                </tr>
+                <tr>
+                    <td>Up</td>
+                    <td>$731 million</td>
+                    <td>2009</td>
+                    <td>8.2</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="studio_row studio_row_reverse">
+            <div class="studio_img">
+                <img src="https://neukevin.neocities.org/final_project_img/studio_disney.jpg"
+                    alt="Walt Disney Animation Studios" title="Walt Disney Animation Studios">
+            </div>
+            <div class="studio_description_box">
+                <p>
+                    Walt Disney Animation Studios
+                </p>
+                <p>
+                    Walt Disney Animation Studios is an American animation studio that creates animated features and
+                    short films for The Walt Disney Company. Founded on October 16, 1923 by brothers Walt Disney and Roy
+                    O. Disney, it is the oldest-running animation studio in the world.
+                </p>
+                <p>
+                    It is currently organized as a division of Walt Disney Studios and is headquartered at the Roy E.
+                    Disney Animation Building at the Walt Disney Studios lot in Burbank, California. Since its
+                    foundation, the studio has produced 59 feature films, from Snow White and the Seven Dwarfs (1937) to
+                    Raya and the Last Dragon (2021), and hundreds of short films.
+                </p>
+            </div>
+        </div>
+        <table class="studio_table">
+            <caption>| High-Grossing Disney Animation Movies |</caption>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Box Office</th>
+                    <th>Release</th>
+                    <th>IMDb Rating</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Frozen</td>
+                    <td>$1.276 billion</td>
+                    <td>2013</td>
+                    <td>7.4</td>
+                </tr>
+                <tr>
+                    <td>The Incredibles 2</td>
+                    <td>$1.242 billion</td>
+                    <td>2018</td>
+                    <td>7.6</td>
+                </tr>
+                <tr>
+                    <td>Zootopia</td>
+                    <td>$1.023 billion</td>
+                    <td>2016</td>
+                    <td>8.0</td>
+                </tr>
+                <tr>
+                    <td>The Lion King</td>
+                    <td>$968 million</td>
+                    <td>1994</td>
+                    <td>8.5</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="studio_row">
+            <div class="studio_img">
+                <img src="https://neukevin.neocities.org/final_project_img/studio_ghibli.png" alt="Studio Ghibli"
+                    title="Studio Ghibli">
+            </div>
+            <div class="studio_description_box">
+                <p>Studio Ghibli</p>
+                <p>
+                    Cartoon Network Studios is an American animation studio owned by the Global Kids, Young Adults &
+                    Classics division of Warner Bros. Entertainment, a subsidiary of AT&T's WarnerMedia. Located in
+                    Burbank, California, the studio primarily produces and develops animated programs and shorts for
+                    Cartoon Network and later Cartoonito.
+                </p>
+                <p>
+                    In the 2010s and beyond, their programs began to expand into their sister companies Adult Swim and
+                    HBO Max. So far, the company has only produced one theatrically released film, The Powerpuff Girls
+                    Movie, distributed by its sister company, Warner Bros. Pictures.
+                </p>
+            </div>
+        </div>
+
+        <div class="studio_row studio_row_reverse">
+            <div class="studio_img">
+                <img src="https://neukevin.neocities.org/final_project_img/studio_cn.png" alt="Cartoon Network Studios"
+                    title="Cartoon Network Studios">
+            </div>
+            <div class="studio_description_box">
+                <p>Cartoon Network Studios</p>
+                <p>
+                    Studio Ghibli Inc. is a Japanese animation film studio headquartered in Koganei, Tokyo. The studio
+                    is best known for its animated feature films, and has also produced several short subjects,
+                    television commercials, and one television film. The studio's mascot and most recognizable symbol is
+                    a character named Totoro from the 1988 anime film My Neighbor Totoro.
+                </p>
+                <p>
+                    Among Studio Ghibli's highest-grossing films are Spirited Away (2001), Howl's Moving Castle (2004)
+                    and Ponyo (2008). The studio was founded on June 15, 1985 by directors Hayao Miyazaki and Isao
+                    Takahata and producer Toshio Suzuki, after the successful performance of Topcraft's Nausicaä of the
+                    Valley of the Wind (1984).
+                </p>
+            </div>
+        </div>
+
+        <div class="studio_row">
+            <div class="studio_img">
+                <img src="https://neukevin.neocities.org/final_project_img/studio_bones.png" alt="Bones Inc."
+                    title="Bones Inc.">
+            </div>
+            <div class="studio_description_box">
+                <p>Bones Inc.</p>
+                <p>
+                    Bones Inc. is a Japanese animation studio. It has produced numerous series, including Soul Eater,
+                    two adaptations of the Fullmetal Alchemist manga, Star Driver, Space Dandy, My Hero Academia. Its
+                    headquarters are located in Igusa, Suginami, Tokyo.
+                </p>
+                <p>
+                    Bones was founded by Sunrise staff members
+                    Masahiko Minami, Hiroshi Ōsaka and Toshihiro Kawamoto in October 1998. One of their first projects
+                    was collaborating with Sunrise on Cowboy Bebop: Knockin' on Heaven's Door, a feature film based on
+                    the Cowboy Bebop anime series.
+                </p>
+            </div>
+        </div>
+
+        <div class="studio_row studio_row_reverse">
+            <div class="studio_img">
+                <img src="https://neukevin.neocities.org/final_project_img/studio_kyoani.png" alt="Kyoto Animation"
+                    title="Kyoto Animation">
+            </div>
+            <div class="studio_description_box">
+                <p>Kyoto Animation</p>
+                <p>
+                    Kyoto Animation often abbreviated KyoAni, is a Japanese animation studio and light novel publisher
+                    located in Uji, Kyoto Prefecture. Founded in 1981 by Yoko and Hideaki Hatta, it has produced anime
+                    works including The Melancholy of Haruhi Suzumiya (2006), Clannad (2007), K-On! (2009), Free!
+                    (2013), Sound! Euphonium (2015), A Silent Voice (2016), and Violet Evergarden (2018).
+                </p>
+                <p>
+                    Since 2009, Kyoto Animation has hosted the annual Kyoto Animation Awards in three categories:
+                    original novels, manga, and scenarios. Some winning submissions are published under the company's KA
+                    Esuma Bunko imprint, and have a chance of being later adapted as anime. Kyoto Animation has become
+                    recognized for its high production values and "sensitivity to the wonders and quandaries of ordinary
+                    life".
+                </p>
+            </div>
+        </div>
+    </article>
+
+    <footer>
+        <div>
+            <div class="sitemap">
+                <a href="/"><span>HOME</span></a>
+                <a href="/movies/movies.html"><span>MOVIES</span></a>
+                <a href="/tv_series/tv_series.html"><span>TV SERIES</span></a>
+                <a href="/studios/studios.html"><span>STUDIOS</span></a>
+                <a href="/about/about.html"><span>ABOUT</span></a>
+            </div>
+            <a href="/"><img src="https://neukevin.neocities.org/final_project_img/anifan_logo.png" alt="AniFan Logo"
+                    title="Home"></a>
+        </div>
+        <p>Created By AniFan 2021.</p>
+    </footer>
+</body>
+
+</html>

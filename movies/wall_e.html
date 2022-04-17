@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>AniFan | Movies | WALL·E</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="../css/main_style.css">
+    <link rel="stylesheet" href="../css/detail_page.css">
+    <!-- resource from google font: Nunito, designed by Vernon Adams, Cyreal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- referece: class material - Examples-ResponsiveDesign - hamburger3 
+        onclick event: show hamburger menu by adding the class name -->
+    <script>
+        function dropHamburger() {
+            let menu = document.getElementById("hamburger");
+            let mask = document.getElementById("mask");
+            let icon = document.getElementById("hamburger_icon");
+            if (menu.className == "hamburger") {
+                menu.className += " drop_hamburger";
+                mask.className += " drop_mask";
+                icon.className += " hamburger_icon_cross";
+            } else {
+                menu.className = "hamburger";
+                mask.className = "mask";
+                icon.className = "hamburger_icon";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="mask" id="mask" onclick="dropHamburger()">
+        <div class="hamburger" id="hamburger">
+            <a href="/">HOME</a>
+            <a href="/movies/movies.html" id="current_page">MOVIES</a>
+            <a href="/tv_series/tv_series.html">TV SERIES</a>
+            <a href="/studios/studios.html">STUDIOS</a>
+            <a href="/about/about.html">ABOUT</a>
+        </div>
+    </div>
+    <header>
+        <a href="/"><img src="https://neukevin.neocities.org/final_project_img/anifan_logo.png" alt="AniFan Logo"
+                title="Home" class="logo"></a>
+        <nav>
+            <a href="/">HOME</a>
+            <div class="drop_down">
+                <a href="/movies/movies.html" id="current_page">MOVIES</a>
+                <div>
+                    <a href="/movies/wall_e.html">WALL·E</a>
+                    <a href="/movies/wreck_it_ralph.html">Wreck-It Ralph</a>
+                    <a href="/movies/princess_mononoke.html">Princess Mononoke</a>
+                </div>
+            </div>
+            <div class="drop_down">
+                <a href="/tv_series/tv_series.html">TV SERIES</a>
+                <div>
+                    <a href="/tv_series/adventure_time.html">Adventure Time</a>
+                    <a href="/tv_series/violet_evergarden.html">Violet Evergarden</a>
+                    <a href="/tv_series/fullmetal_alchemist_brotherhood.html">Fullmetal Alchemist: Brotherhood</a>
+                </div>
+            </div>
+            <a href="/studios/studios.html">STUDIOS</a>
+            <a href="/about/about.html">ABOUT</a>
+        </nav>
+        <div class="hamburger_icon" id="hamburger_icon" onclick="dropHamburger()">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+        </div>
+    </header>
+
+    <article>
+        <div class="top_slideshow_box">
+            <img src="https://neukevin.neocities.org/final_project_img/walle/scene01.png" alt="" id="w1">
+            <img src="https://neukevin.neocities.org/final_project_img/walle/scene02.png" alt="" id="w2">
+            <img src="https://neukevin.neocities.org/final_project_img/walle/scene03.png" alt="" id="w3">
+            <img src="https://neukevin.neocities.org/final_project_img/walle/scene04.png" alt="" id="w4">
+            <img src="https://neukevin.neocities.org/final_project_img/walle/scene05.png" alt="" id="w5">
+
+            <p>WALL·E</p>
+
+            <div class="link_holder">
+                <a href="#w1" class="link_button"></a>
+                <a href="#w2" class="link_button"></a>
+                <a href="#w3" class="link_button"></a>
+                <a href="#w4" class="link_button"></a>
+                <a href="#w5" class="link_button"></a>
+            </div>
+        </div>
+
+        <div class="basic_info_row">
+            <div class="studio_img">
+                <img src="https://neukevin.neocities.org/final_project_img/walle/studio_pixar.png" alt="">
+            </div>
+            <ul class="basic_info">
+                <li class="basic_info_title">WALL·E</li>
+                <li>Release: 2008</li>
+                <li>Running Time: 1h 38m</li>
+                <li>Produced By: <i>Pixar Animation Studios</i></li>
+            </ul>
+        </div>
+
+        <p class="detail_title">PLOT</p>
+        <div class="plot_row">
+            <div class="plot">
+                <p>
+                    What if mankind had to leave Earth and somebody forgot to turn the last robot off? After hundreds of
+                    years doing what he was built for, <a href="#character1">WALL·E</a> discovers a new purpose in life when he meets a sleek
+                    search robot named <a href="#character2">EVE</a>.
+                </p>
+                <p>
+                    EVE comes to realize that WALL·E has inadvertently stumbled upon the key to
+                    the planet's future, and races back to space to report to the humans. Meanwhile, WALL·E chases EVE
+                    across the galaxy and sets into motion one of the most imaginative adventures ever brought to the
+                    big screen.
+                </p>
+            </div>
+            <div class="poster">
+                <img src="https://neukevin.neocities.org/final_project_img/cut_wall_e_poster.jpg" alt="">
+            </div>
+        </div>
+
+        <p class="detail_title">CHARACTER</p>
+        <div class="character_row">
+            <div class="c_button_box">
+                <a href="#character1"><img src="https://neukevin.neocities.org/final_project_img/walle/walle_square.png" alt=""></a>
+                <a href="#character2"><img src="https://neukevin.neocities.org/final_project_img/walle/eve_square.png" alt=""></a>
+            </div>
+
+            <div id="character1"></div>
+            <div id="character2"></div>
+            <div class="c_box">
+                <div class="c1" id="wall_e_image">
+                    <p>WALL·E</p>
+                </div>
+                <div class="c2" id="eve_image">
+                    <p>EVE</p>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <footer>
+        <div>
+            <div class="sitemap">
+                <a href="/"><span>HOME</span></a>
+                <a href="/movies/movies.html"><span>MOVIES</span></a>
+                <a href="/tv_series/tv_series.html"><span>TV SERIES</span></a>
+                <a href="/studios/studios.html"><span>STUDIOS</span></a>
+                <a href="/about/about.html"><span>ABOUT</span></a>
+            </div>
+            <a href="/"><img src="https://neukevin.neocities.org/final_project_img/anifan_logo.png" alt="AniFan Logo"
+                    title="Home"></a>
+        </div>
+        <p>Created By AniFan 2021.</p>
+    </footer>
+</body>
+
+</html>

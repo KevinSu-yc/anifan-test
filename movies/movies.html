@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>AniFan | Movies</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="../css/main_style.css">
+    <link rel="stylesheet" href="../css/movie_tvseries_style.css">
+    <!-- resource from google font: Nunito, designed by Vernon Adams, Cyreal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- referece: class material - Examples-ResponsiveDesign - hamburger3 
+        onclick event: show hamburger menu by adding the class name -->
+    <script>
+        function dropHamburger() {
+            let menu = document.getElementById("hamburger");
+            let mask = document.getElementById("mask");
+            let icon = document.getElementById("hamburger_icon");
+            if (menu.className == "hamburger") {
+                menu.className += " drop_hamburger";
+                mask.className += " drop_mask";
+                icon.className += " hamburger_icon_cross";
+            } else {
+                menu.className = "hamburger";
+                mask.className = "mask";
+                icon.className = "hamburger_icon";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="mask" id="mask" onclick="dropHamburger()">
+        <div class="hamburger" id="hamburger">
+            <a href="/">HOME</a>
+            <a href="/movies/movies.html" id="current_page">MOVIES</a>
+            <a href="/tv_series/tv_series.html">TV SERIES</a>
+            <a href="/studios/studios.html">STUDIOS</a>
+            <a href="/about/about.html">ABOUT</a>
+        </div>
+    </div>
+    <header>
+        <a href="/"><img src="https://neukevin.neocities.org/final_project_img/anifan_logo.png" alt="AniFan Logo"
+                title="Home" class="logo"></a>
+        <nav>
+            <a href="/">HOME</a>
+            <div class="drop_down">
+                <a href="/movies/movies.html" id="current_page">MOVIES</a>
+                <div>
+                    <a href="/movies/wall_e.html">WALL·E</a>
+                    <a href="/movies/wreck_it_ralph.html">Wreck-It Ralph</a>
+                    <a href="/movies/princess_mononoke.html">Princess Mononoke</a>
+                </div>
+            </div>
+            <div class="drop_down">
+                <a href="/tv_series/tv_series.html">TV SERIES</a>
+                <div>
+                    <a href="/tv_series/adventure_time.html">Adventure Time</a>
+                    <a href="/tv_series/violet_evergarden.html">Violet Evergarden</a>
+                    <a href="/tv_series/fullmetal_alchemist_brotherhood.html">Fullmetal Alchemist: Brotherhood</a>
+                </div>
+            </div>
+            <a href="/studios/studios.html">STUDIOS</a>
+            <a href="/about/about.html">ABOUT</a>
+        </nav>
+        <div class="hamburger_icon" id="hamburger_icon" onclick="dropHamburger()">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+        </div>
+    </header>
+
+    <article>
+        <p class="movie_page_title">
+            Animation Movies
+        </p>
+        <div class="mt_row">
+            <div class="mt_box">
+                <div class="mt_poster">
+                    <a href="wall_e.html"><img
+                            src="https://neukevin.neocities.org/final_project_img/cut_wall_e_poster.jpg" alt="WALL·E"
+                            title="WALL·E"></a>
+                </div>
+                <div class="mt_intro">
+                    <p>
+                        WALL·E
+                    </p>
+                    <ul>
+                        <li>Release: 2008</li>
+                        <li>Running Time: 1h 38m</li>
+                        <li>Produced By: <i>Pixar Animation Studios</i></li>
+                    </ul>
+                    <a href="wall_e.html">See Plot & Characters</a>
+                </div>
+            </div>
+            <div class="mt_box">
+                <div class="mt_poster">
+                    <a href="wreck_it_ralph.html"><img
+                            src="https://neukevin.neocities.org/final_project_img/cut_wreck_it_ralph_poster.jpg"
+                            alt="Wreck-It Ralph" title="Wreck-It Ralph"></a>
+                </div>
+                <div class="mt_intro">
+                    <p>
+                        Wreck-It Ralph
+                    </p>
+                    <ul>
+                        <li>Release: 2012</li>
+                        <li>Running Time: 1h 41m</li>
+                        <li>Produced By: <i>Walt Disney Animation Studios</i></li>
+                    </ul>
+                    <a href="wreck_it_ralph.html">See Plot & Characters</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt_row">
+            <div class="mt_box">
+                <div class="mt_poster">
+                    <a href="princess_mononoke.html"><img
+                            src="https://neukevin.neocities.org/final_project_img/princess_mononoke/poster.jpg"
+                            alt="Princess Mononoke" title="Princess Mononoke"></a>
+                </div>
+                <div class="mt_intro">
+                    <p>
+                        Princess Mononoke
+                    </p>
+                    <ul>
+                        <li>Release: 1997</li>
+                        <li>Running Time: 2h 14m</li>
+                        <li>Produced By: <i>Studio Ghibli</i></li>
+                    </ul>
+                    <a href="princess_mononoke.html">See Plot & Characters</a>
+                </div>
+            </div>
+            <div class="mt_box mt_box_last">
+                <div class="mt_poster">
+                    <img src="https://neukevin.neocities.org/final_project_img/cut_wall_e_poster.jpg" alt="">
+                    <p>
+                        Coming Soon
+                    </p>
+                </div>
+                <div class="mt_intro">
+                    <p>
+                        Coming Soon
+                    </p>
+                    <ul>
+                        <li>New Movies Will Be Posted Every Month ...</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </article>
+
+    <footer>
+        <div>
+            <div class="sitemap">
+                <a href="/"><span>HOME</span></a>
+                <a href="/movies/movies.html"><span>MOVIES</span></a>
+                <a href="/tv_series/tv_series.html"><span>TV SERIES</span></a>
+                <a href="/studios/studios.html"><span>STUDIOS</span></a>
+                <a href="/about/about.html"><span>ABOUT</span></a>
+            </div>
+            <a href="/"><img src="https://neukevin.neocities.org/final_project_img/anifan_logo.png" alt="AniFan Logo"
+                    title="Home"></a>
+        </div>
+        <p>Created By AniFan 2021.</p>
+    </footer>
+</body>
+
+</html>

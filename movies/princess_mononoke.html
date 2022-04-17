@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>AniFan | Movies | Princess Mononoke</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="../css/main_style.css">
+    <link rel="stylesheet" href="../css/detail_page.css">
+    <!-- resource from google font: Nunito, designed by Vernon Adams, Cyreal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- referece: class material - Examples-ResponsiveDesign - hamburger3 
+        onclick event: show hamburger menu by adding the class name -->
+    <script>
+        function dropHamburger() {
+            let menu = document.getElementById("hamburger");
+            let mask = document.getElementById("mask");
+            let icon = document.getElementById("hamburger_icon");
+            if (menu.className == "hamburger") {
+                menu.className += " drop_hamburger";
+                mask.className += " drop_mask";
+                icon.className += " hamburger_icon_cross";
+            } else {
+                menu.className = "hamburger";
+                mask.className = "mask";
+                icon.className = "hamburger_icon";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="mask" id="mask" onclick="dropHamburger()">
+        <div class="hamburger" id="hamburger">
+            <a href="/">HOME</a>
+            <a href="/movies/movies.html" id="current_page">MOVIES</a>
+            <a href="/tv_series/tv_series.html">TV SERIES</a>
+            <a href="/studios/studios.html">STUDIOS</a>
+            <a href="/about/about.html">ABOUT</a>
+        </div>
+    </div>
+    <header>
+        <a href="/"><img src="https://neukevin.neocities.org/final_project_img/anifan_logo.png" alt="AniFan Logo"
+                title="Home" class="logo"></a>
+        <nav>
+            <a href="/">HOME</a>
+            <div class="drop_down">
+                <a href="/movies/movies.html" id="current_page">MOVIES</a>
+                <div>
+                    <a href="/movies/wall_e.html">WALL·E</a>
+                    <a href="/movies/wreck_it_ralph.html">Wreck-It Ralph</a>
+                    <a href="/movies/princess_mononoke.html">Princess Mononoke</a>
+                </div>
+            </div>
+            <div class="drop_down">
+                <a href="/tv_series/tv_series.html">TV SERIES</a>
+                <div>
+                    <a href="/tv_series/adventure_time.html">Adventure Time</a>
+                    <a href="/tv_series/violet_evergarden.html">Violet Evergarden</a>
+                    <a href="/tv_series/fullmetal_alchemist_brotherhood.html">Fullmetal Alchemist: Brotherhood</a>
+                </div>
+            </div>
+            <a href="/studios/studios.html">STUDIOS</a>
+            <a href="/about/about.html">ABOUT</a>
+        </nav>
+        <div class="hamburger_icon" id="hamburger_icon" onclick="dropHamburger()">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+        </div>
+    </header>
+
+    <article>
+        <div class="top_slideshow_box">
+            <img src="https://neukevin.neocities.org/final_project_img/princess_mononoke/scene01.jpg" alt="" id="w1">
+            <img src="https://neukevin.neocities.org/final_project_img/princess_mononoke/scene02.jpg" alt="" id="w2">
+            <img src="https://neukevin.neocities.org/final_project_img/princess_mononoke/scene03.jpg" alt="" id="w3">
+            <img src="https://neukevin.neocities.org/final_project_img/princess_mononoke/scene04.jpg" alt="" id="w4">
+            <img src="https://neukevin.neocities.org/final_project_img/princess_mononoke/scene05.jpg" alt="" id="w5">
+            <p>Princess Mononoke</p>
+
+            <div class="link_holder">
+                <a href="#w1" class="link_button"></a>
+                <a href="#w2" class="link_button"></a>
+                <a href="#w3" class="link_button"></a>
+                <a href="#w4" class="link_button"></a>
+                <a href="#w5" class="link_button"></a>
+            </div>
+        </div>
+
+        <div class="basic_info_row">
+            <div class="studio_img">
+                <img src="https://neukevin.neocities.org/final_project_img/studio_ghibli.png" alt="">
+            </div>
+            <ul class="basic_info">
+                <li class="basic_info_title">Princess Mononoke</li>
+                <li>Release: 1997</li>
+                <li>Running Time: 2h 14m</li>
+                <li>Produced By: <i>Studio Ghibli</i></li>
+            </ul>
+        </div>
+
+        <p class="detail_title">PLOT</p>
+        <div class="plot_row">
+            <div class="plot">
+                <p>
+                    While protecting his village from rampaging boar-god/demon, a confident young warrior, <a
+                        href="#character1">Ashitaka</a>, is
+                    stricken by a deadly curse. To save his life, he must journey to the forests of the west. Once
+                    there, he's embroiled in a fierce campaign that humans were waging on the forest.
+                </p>
+                <p>
+                    The ambitious Lady
+                    Eboshi and her loyal clan use their guns against the gods of the forest and a brave young woman, <a
+                        href="#character2">San</a>
+                    who was known as Princess Mononoke raised by a wolf-god. Ashitaka sees the good in both sides and
+                    tries to
+                    stem the flood of blood. This is met by animosity by both sides as they each see him as supporting
+                    the enemy.
+                </p>
+            </div>
+            <div class="poster">
+                <img src="https://neukevin.neocities.org/final_project_img/princess_mononoke/poster.jpg" alt="">
+            </div>
+        </div>
+
+        <p class="detail_title">CHARACTER</p>
+        <div class="character_row">
+            <div class="c_button_box">
+                <a href="#character1"><img
+                        src="https://neukevin.neocities.org/final_project_img/princess_mononoke/ashitaka_square.jpg"
+                        alt=""></a>
+                <a href="#character2"><img
+                        src="https://neukevin.neocities.org/final_project_img/princess_mononoke/san_square.jpg"
+                        alt=""></a>
+            </div>
+
+
+            <div id="character1"></div>
+            <div id="character2"></div>
+            <div class="c_box">
+                <div class="c1" id="ashitaka_image">
+                    <p>Ashitaka</p>
+                </div>
+                <div class="c2" id="san_image">
+                    <p>San</p>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <footer>
+        <div>
+            <div class="sitemap">
+                <a href="/"><span>HOME</span></a>
+                <a href="/movies/movies.html"><span>MOVIES</span></a>
+                <a href="/tv_series/tv_series.html"><span>TV SERIES</span></a>
+                <a href="/studios/studios.html"><span>STUDIOS</span></a>
+                <a href="/about/about.html"><span>ABOUT</span></a>
+            </div>
+            <a href="/"><img src="https://neukevin.neocities.org/final_project_img/anifan_logo.png" alt="AniFan Logo"
+                    title="Home"></a>
+        </div>
+        <p>Created By AniFan 2021.</p>
+    </footer>
+</body>
+
+</html>

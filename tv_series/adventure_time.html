@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>AniFan | TV Series | Adventure Time</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="../css/main_style.css">
+    <link rel="stylesheet" href="../css/detail_page.css">
+    <!-- resource from google font: Nunito, designed by Vernon Adams, Cyreal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- referece: class material - Examples-ResponsiveDesign - hamburger3 
+        onclick event: show hamburger menu by adding the class name -->
+    <script>
+        function dropHamburger() {
+            let menu = document.getElementById("hamburger");
+            let mask = document.getElementById("mask");
+            let icon = document.getElementById("hamburger_icon");
+            if (menu.className == "hamburger") {
+                menu.className += " drop_hamburger";
+                mask.className += " drop_mask";
+                icon.className += " hamburger_icon_cross";
+            } else {
+                menu.className = "hamburger";
+                mask.className = "mask";
+                icon.className = "hamburger_icon";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="mask" id="mask" onclick="dropHamburger()">
+        <div class="hamburger" id="hamburger">
+            <a href="/">HOME</a>
+            <a href="/movies/movies.html">MOVIES</a>
+            <a href="/tv_series/tv_series.html" id="current_page">TV SERIES</a>
+            <a href="/studios/studios.html">STUDIOS</a>
+            <a href="/about/about.html">ABOUT</a>
+        </div>
+    </div>
+    <header>
+        <a href="/"><img src="https://neukevin.neocities.org/final_project_img/anifan_logo.png" alt="AniFan Logo"
+                title="Home" class="logo"></a>
+        <nav>
+            <a href="/">HOME</a>
+            <div class="drop_down">
+                <a href="/movies/movies.html">MOVIES</a>
+                <div>
+                    <a href="/movies/wall_e.html">WALL·E</a>
+                    <a href="/movies/wreck_it_ralph.html">Wreck-It Ralph</a>
+                    <a href="/movies/princess_mononoke.html">Princess Mononoke</a>
+                </div>
+            </div>
+            <div class="drop_down">
+                <a href="/tv_series/tv_series.html" id="current_page">TV SERIES</a>
+                <div>
+                    <a href="/tv_series/adventure_time.html">Adventure Time</a>
+                    <a href="/tv_series/violet_evergarden.html">Violet Evergarden</a>
+                    <a href="/tv_series/fullmetal_alchemist_brotherhood.html">Fullmetal Alchemist: Brotherhood</a>
+                </div>
+            </div>
+            <a href="/studios/studios.html">STUDIOS</a>
+            <a href="/about/about.html">ABOUT</a>
+        </nav>
+        <div class="hamburger_icon" id="hamburger_icon" onclick="dropHamburger()">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+        </div>
+    </header>
+
+    <article>
+        <div class="top_slideshow_box">
+            <img src="https://neukevin.neocities.org/final_project_img/adventure_time/scene01.jpg" alt="" id="w1">
+            <img src="https://neukevin.neocities.org/final_project_img/adventure_time/scene02.jpg" alt="" id="w2">
+            <img src="https://neukevin.neocities.org/final_project_img/adventure_time/scene03.jpg" alt="" id="w3">
+            <img src="https://neukevin.neocities.org/final_project_img/adventure_time/scene04.jpg" alt="" id="w4">
+            <img src="https://neukevin.neocities.org/final_project_img/adventure_time/scene05.jpg" alt="" id="w5">
+            <p>Adventure Time</p>
+
+            <div class="link_holder">
+                <a href="#w1" class="link_button"></a>
+                <a href="#w2" class="link_button"></a>
+                <a href="#w3" class="link_button"></a>
+                <a href="#w4" class="link_button"></a>
+                <a href="#w5" class="link_button"></a>
+            </div>
+        </div>
+
+        <div class="basic_info_row">
+            <div class="studio_img">
+                <img src="https://neukevin.neocities.org/final_project_img/studio_cn.png" alt="">
+            </div>
+            <ul class="basic_info">
+                <li class="basic_info_title">Adventure Time</li>
+                <li>Release: 2010–2018</li>
+                <li>Running Time: 11m</li>
+                <li>Produced By: <i>Cartoon Network Studios</i></li>
+            </ul>
+        </div>
+
+        <p class="detail_title">PLOT</p>
+        <div class="plot_row">
+            <div class="plot">
+                <p>
+                    Prof. Simon Petrikoff is driven insane by an ancient magic crown the magic, which is the only thing
+                    that keeps him and his adopted demon daughter marceline alive after the human world is destroyed.
+                    1000 years later a new world is formed a kingdom of candy run by a harsh ruler Bonnibel bubblegum
+                    and monsters and demons roam the lands.
+                </p>
+                <p>
+                    <a href="#character1">Finn</a> and <a href="#character2">Jake</a>
+                    two adventurers become great friends with
+                    Marceline, Bubblegum and Simon and they uncover secrets about their past as Finn (the last human)
+                    searches for that of his own. As the evil Lich resurfaces, Simon's time displaced fiance Betty goes
+                    insane and Finn's sentient grass arm becomes a conflicted volitle plant clone. Finn, Jake, Simon,
+                    Marceline and Bubblegum must do whatever they can to save the world from another apocalypse when
+                    Bonnibel's evil uncle declares war.
+                </p>
+            </div>
+            <div class="poster">
+                <img src="https://neukevin.neocities.org/final_project_img/cut_adventure_time_poster.jpg" alt="">
+            </div>
+        </div>
+
+        <p class="detail_title">CHARACTER</p>
+        <div class="character_row">
+            <div class="c_button_box">
+                <a href="#character1"><img
+                        src="https://neukevin.neocities.org/final_project_img/adventure_time/finn_square.jpg"
+                        alt=""></a>
+                <a href="#character2"><img
+                        src="https://neukevin.neocities.org/final_project_img/adventure_time/jake_square.jpg"
+                        alt=""></a>
+            </div>
+
+
+            <div id="character1"></div>
+            <div id="character2"></div>
+            <div class="c_box">
+                <div class="c1" id="finn_image">
+                    <p>Finn</p>
+                </div>
+                <div class="c2" id="jake_image">
+                    <p>Jake</p>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <footer>
+        <div>
+            <div class="sitemap">
+                <a href="/"><span>HOME</span></a>
+                <a href="/movies/movies.html"><span>MOVIES</span></a>
+                <a href="/tv_series/tv_series.html"><span>TV SERIES</span></a>
+                <a href="/studios/studios.html"><span>STUDIOS</span></a>
+                <a href="/about/about.html"><span>ABOUT</span></a>
+            </div>
+            <a href="/"><img src="https://neukevin.neocities.org/final_project_img/anifan_logo.png" alt="AniFan Logo"
+                    title="Home"></a>
+        </div>
+        <p>Created By AniFan 2021.</p>
+    </footer>
+</body>
+
+</html>
