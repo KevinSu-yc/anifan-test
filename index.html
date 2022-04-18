@@ -7,16 +7,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
 
-    <link rel="stylesheet" href="css/main_style.css">
     <!-- resource from google font: Nunito, designed by Vernon Adams, Cyreal -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
 
+    <style>
+        body{
+            font-family: 'Nunito', sans-serif;
+            color: #333;
+        }
+
+        h1{
+            background: silver;
+            padding: 10px;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        a{
+            color: #666;
+            font-weight: 600;
+            background: #DDD;
+            padding: 15px;
+            margin-right: 10px;
+            border-left: 8px solid;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s;
+            width: 150px;
+        }
+
+        a::after{
+            content: " >";
+            transition: all 0.3s;
+        }
+
+        a:hover{
+            color: #333;
+        }
+
+        a:hover::after{
+            margin-left: 5px;
+        }
+
+        div{
+            display: flex;
+            flex-wrap: wrap;
+        }
+    </style>
+
 </head>
 
 <body>
-    <a href="home/">See my project</a>
+    <h1>This website is created for a course project.</h1>
+    <div>
+        <a href="home/">View Website</a>
+        <a href="home/design_document/design_document.pdf">Design Doc</a>
+    </div>
 </body>
 
 </html>
